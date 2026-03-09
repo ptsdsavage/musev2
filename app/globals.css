@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --muse-blush: #F0D6D0;
+  --muse-brown: #9A6C62;
+  --muse-cream: #FFF9F5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--muse-cream);
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar but keep scroll */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Auth modal slide-up animation */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
